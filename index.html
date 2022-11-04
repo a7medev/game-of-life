@@ -5,20 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Conway's Game of Life</title>
+    <link rel="stylesheet" href="main.css" />
   </head>
   <body>
     <h1>Game of Life</h1>
-    <p role="alert">
+    <p role="alert" class="alert">
       Note: Unlike the original game, this implementation doesn't have an
       infinite board <em>yet</em>.
     </p>
     <form id="start-form">
-      <div>
+      <div class="input-container">
         <label for="board-size">Board width/height</label>
         <input type="number" value="100" min="2" name="size" id="board-size" />
       </div>
 
-      <div>
+      <div class="input-container">
         <label for="init-ratio">Initialization ratio</label>
         <input
           type="number"
@@ -33,12 +34,7 @@
 
       <button type="submit">Start Game</button>
     </form>
-    <canvas
-      id="board"
-      width="2000"
-      height="2000"
-      style="max-width: 100vw; max-height: 100vh"
-    ></canvas>
-    <script src="/main.js"></script>
+    <canvas id="board" width="2000" height="2000"></canvas>
+    <script src="main.js"></script>
   </body>
 </html>
